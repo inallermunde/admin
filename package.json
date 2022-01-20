@@ -59,13 +59,14 @@
     "@storybook/addons": "^5.3.19",
     "@storybook/react": "^5.3.19",
     "babel-loader": "^8.1.0",
+    "env-cmd": "^10.1.0",
     "prettier": "2.0.5"
   },
   "scripts": {
-    "build": "gatsby build",
+    "build": "env-cmd -e production gatsby build",
     "develop": "gatsby develop -p 7000",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "env-cmd -e production npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
